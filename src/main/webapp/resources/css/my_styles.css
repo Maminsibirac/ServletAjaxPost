@@ -1,0 +1,410 @@
+@font-face {
+	font-family: 'PT-Sans';
+	src: local("PT-Sans"),
+	url('PTSansRegular.ttf');
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: local('PT Sans Italic'), local('PTSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v5/7dSh6BcuqDLzS2qAASIeuj8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+INPUT.text:focus {
+	border: 2px solid #fda815;	
+}
+
+TEXTAREA:focus {
+	border: 2px solid #fda815;
+}
+
+
+
+html {
+    background:	grey;
+    background-repeat:no-repeat;
+    background-attachment:fixed;	
+}
+
+
+/*Header*/
+.header {
+	width: 1152px;
+	height: 180px;
+	background-image: linear-gradient(to top, #7499b4 ,#a1dae7 60%);	
+	margin: auto;	
+}
+
+.header .snow-logo {
+	float: left;
+	width: 105px;
+	height: 158px;
+	margin: 5px 0 0 233px; 
+}
+
+.header .social-logo {
+	width: 130px;
+	height: 7px;
+	float: right;
+	margin: -150px 225px 0 0;	
+}
+
+.header .text {
+	height: 70px;
+	width: 350px;
+	padding: 5px 447px 90px 365px; 
+	color: white;	
+	font-family: PT-Sans;
+	font-style: Italic;
+	font-size: 20px;
+	line-height: 4px;
+}
+
+.header .text .text-line-second {
+	width: 150px;
+	height: 4px;
+	padding-left: 102px;
+}
+
+.header .text .text-line-third {
+	width: 150px;
+	height: 4px;
+	padding-left: 200px;
+}
+
+.header .toolbar {
+	background-color: #5c5c5c;
+	width: 565px;
+	height: 54px;
+	margin: -72px 0 0 363px;
+	font-family: PT-Sans, sans-serif;
+	font-style: Italic;
+	font-size: 18px;
+	color: #94c4d2;	
+}
+
+.header .toolbar .tool-first {
+	padding: 14px 0 0 38px;	
+}
+
+.header .toolbar .tool-second {
+	margin: -39px 0 0 172px;	
+}
+
+.header .toolbar .tool-third {
+	margin: -21px 0 0 380px;
+	color: #dca92c;	
+}
+
+
+/*Main*/
+main {
+	width: 1152px;
+	height: 1092px;
+	margin: auto;
+	background-color: #7499b4;						  
+}
+
+main .background {
+	background-image: url(images/background/mount.png);
+	background-repeat: no-repeat;
+	height: 546px;
+	background-position: 14px 140px
+}
+
+main .content-first {
+	width: 490px;
+	height: 252px;
+	margin: 0px 0 0 220px;
+	float:left;
+	position: relative;	
+}
+
+main .content-first .arrow-left {
+	position: absolute;
+	top: 112px;
+	left: 12px;
+	opacity: 0.6;	
+}
+
+main .content-first .arrow-right {
+	position: absolute;
+	top:112px;
+	right: 20px;	
+}
+
+main .content-first .radio-button-first {
+	position: absolute;
+	top: 225px;
+	right: 280px;
+}
+
+main .content-first .radio-button-second {
+	position: absolute;
+	top: 225px;
+	right: 240px;
+}
+
+main .content-first .radio-button-third {
+	position: absolute;
+	top: 225px;
+	right: 200px;
+}
+
+main .content-second {
+	position: relative;
+}
+
+main .content-second .arena {
+	position: absolute;
+	width: 73px; 
+	height: 70px;	
+	right: 223px;
+	opacity: 0.8;
+}
+
+main .content-second .play {
+	position: absolute;
+	width: 32px;
+	top: 18px;
+	right: 322px;
+	opacity: 0.5;	
+}
+
+main .content-second .photo {
+	position: absolute;	
+	width: 73px; 
+	height: 70px;
+	opacity: 0.8;
+	top: 89px;
+	right: 223px;
+	
+}
+
+main .content-second .snow {
+	position: absolute;
+	width: 73px; 
+	height: 69px;
+	opacity: 0.8;
+	right: 223px;
+}	
+
+main .content-second .text-video {
+	position: absolute;
+	right: 215px;
+	top: 15px;
+	font: normal 18px arial, sans-serif;
+	width: 70px;	
+}
+
+main .content-second .text-photo {
+	position: absolute;
+	font: normal 18px arial, sans-serif;
+	right: 210px;
+	top: 105px;
+	width: 70px;
+}
+
+main .content-second .text-press {
+	position: absolute;
+	width: 70px;
+	font: normal 18px arial, sans-serif;
+	right: 220px;
+	top: 195px;
+}
+
+main .content-second .press {
+	padding-left:7px;	
+}
+
+main .article-content {
+	width: 452px;
+	heigth: 80px;
+	background-color: #b1cecf;
+	opacity: 0.6;
+	margin: 4px 0 0 220px;
+	padding: 10px 15px;
+	font-family: PT-Sans, Regular, sens-serif;
+	font-size: 16px;
+}
+
+main .title {
+	margin: 155px 0 0 220px;
+	font: italic bold 24px arial, sans-serif;
+	color: #fda815; 
+}
+
+
+/*Main Article*/
+article {	
+	width: 1152px;
+	height: 80px;
+	background-image: url(images/background/background_dark.png);	
+}
+
+article .text {
+	width: 685px;
+	height: 485px;
+	margin-left: 220px;
+	margin-top: 6px;
+	padding-top: 18px;
+	font-family: PT-Sans, Regular, sans-serif;
+	font-size: 14px;
+	color: #f6f9fb;
+	line-height: 25px;	
+}
+
+
+/*Main Action*/
+.edit-form {
+	padding-top: 36px;
+	margin-left: 325px;
+	height: 465px;
+ 	width: 1152px;
+	color: #f6f9fb; 
+	font-size: 18px;	
+}
+
+
+span {
+	margin-left: 4px;
+	font-size: 12px;
+	color: #94c4d2;	
+}
+
+.ground {
+	background-color: #1b252e; 	
+}
+
+.edit-form .text {
+	width: 350px;
+	border: 2px solid #7499b4;
+	background-color: black;
+	color: #7499b4; 
+	height: 25px;
+	margin-left: 15px;	
+}
+
+.form-text {
+	font-size: 16px;
+	margin-right: 10px;
+	float: left;
+	height: 400px;	
+}
+
+.comments {
+	padding-top: 150px;
+	margin-left: 2px;
+}
+
+
+.indent {	 
+	margin-top: 25px;
+	margin-left: 21px;
+}
+
+.form-text .name {
+	padding-left: 54px;
+	padding-top: 2px;
+}
+
+
+.form-text .email {
+	padding-left: 25px;
+	margin-left: 15px;
+}
+
+.box {
+	width: 350px;
+	border: 2px solid #7499b4;
+	background-color: black;
+	color: #7499b4;	
+}
+
+.form-action-1 {
+	font-size: 15px;
+	margin-top: 32px;
+	padding-left: 120px;	
+}
+
+
+.first_check {	
+	margin-top: 12px;
+}
+
+.second_check {
+	margin-top: 36px;
+}
+
+.textarea {
+	margin-top: 15px;	
+}
+
+.send {
+	margin-top: 15px;	
+	margin-left: 270px;
+}
+
+.submit {
+	width: 200px;
+	height: 50px;	
+	background: #62b7d6;
+	border: 0px solid;
+	font-family: PT-Sans. sans-serif;
+	font-size: 19px;
+	color: black;  
+}
+
+#messenger {
+	margin: -30px 0 15px 118px;
+	font-family:PT-Sans, Regular, sans-serif;
+	text-align:center;
+	font-size: 17px;
+	width: 350px;
+	background: #62b7d6;
+	display:none;	
+}
+
+
+/*Footer*/
+footer {
+	width: 1152px;
+	height: 320px;
+	margin: auto;
+	background-color: #1b252e;
+	background-image: url(images/background/mount_footer.png);
+	background-repeat: no-repeat;
+	background-position: bottom left;	
+}
+
+footer .snowboard-footer {
+	width: 335px;
+	height: 296px;
+	margin: -55px 0 280px 790px;
+	background-image: url(images/pictures/snowboard_footer.png);
+}
+
+footer .text-contact {
+	font:  PT-Sans, Regular, sans-serif;
+	font-size: 14px;
+	width: 265px;
+	height: 40px;
+	margin: -310px 0 0 650px;
+	color: #f6f9fb;
+	line-height: 5px;
+}
+
+footer .contact-phone {
+	font-size: 14px;
+	color: #8cbdcc;
+}
+
+footer .text-company {
+	font:  PT-Sans, Regular, sans-serif;
+	font-size: 13px;
+	width: 190px;
+	height:20px;
+	color: #f6f9fb; 
+	margin: 30px 0 0 770px;
+}
