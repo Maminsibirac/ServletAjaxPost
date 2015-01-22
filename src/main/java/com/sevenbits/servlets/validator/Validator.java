@@ -16,7 +16,7 @@ public class Validator {
     private static final Logger logger = Logger.getLogger(Validator.class);
 
     public Validator(String first, String last, String email) {
-        logger.debug(getClass().getName());
+        logger.info(getClass().getName());
         pattern = Pattern.compile(EMAIL_PATTERN);
         this.first = first;
         this.last = last;
@@ -29,14 +29,14 @@ public class Validator {
     }
 
     public boolean isNameValid() {
-        if(first.equals("")) {
+        if(first.isEmpty()) {
             return false;
         }
         return true;
     }
 
     public boolean isSurnameValid() {
-        if(last.equals("")) {
+        if(last.isEmpty()) {
             return false;
         }
         return true;

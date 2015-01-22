@@ -2,7 +2,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@page isELIgnored="false"%>
+
 <script type="text/javascript" src="/sap/resources/javascript/jquery-2.1.3.js"></script>
+<script type="text/javascript" src="/sap/resources/javascript/removeErrorMessage.js"></script>
+<script type="text/javascript" src="/sap/resources/javascript/setTimeoutMessage.js"></script>
+
 <link rel="stylesheet" href="/sap/resources/css/my_styles.css" type="text/css">
 
 
@@ -10,21 +14,6 @@
 	<head>
     	<meta charset="utf-8">
         <title>My test page!</title>
-        <script>
-            function timeoutName() {
-                setTimeout(function() { $("#nameFail").hide(); }, 0);
-            }
-
-            function timeoutSurname() {
-                setTimeout(function() { $("#surnameFail").hide(); }, 0);
-            }
-
-            function timeoutEmail() {
-                setTimeout(function() { $("#emailFail").hide(); }, 0);
-            }
-
-            setTimeout(function() { $(".send-successful").hide(); }, 4000);
-        </script>
 </head>
 <body>
  		<header class="header">
@@ -91,7 +80,9 @@
             	Чтобы записать незабываемое видео или снять чумовую фотосессию в снежных горах на сноуборде, заполните форму и мы свяжемся с вами в ближайшее время.
             </div>
             <div class="send-successful">
-                <c:if test="${condition['success']}">Ваша заявка успешно принята.</c:if>
+                <c:if test="${condition['success']}">
+                    Ваша заявка успешно принята.
+                </c:if>
             </div>
         </article>
 
@@ -107,7 +98,7 @@
                     </div>
 
 			        <div form-action>
-			            <input id="first" name="first" placeholder="Input name" type="text" oninput="timeoutName()"
+			            <input id="first" name="first" placeholder="Input name" type="text" oninput="removeErrorName()"
 			            <c:if test="${condition['success'] eq false}"> value="${field['name']}" </c:if> class="text" autocomplete="off"/>
 
                         <span class="incorrect-input" id="nameFail">
@@ -116,7 +107,7 @@
                                 </c:if>
                         </span>
 
-			            <p><input id="last" name="last" placeholder="Input surname" type="text" oninput="timeoutSurname()"
+			            <p><input id="last" name="last" placeholder="Input surname" type="text" oninput="removeErrorSurname()"
 			            <c:if test="${condition['success'] eq false}"> value="${field['surname']}" </c:if> class="text" autocomplete="off"/>
 
 			            <span class="incorrect-input" id="surnameFail">
@@ -125,7 +116,7 @@
 			                    </c:if>
 			            </span></p>
 
-			            <p><input id="email" placeholder="Input e-mail" name="email" type="text" oninput="timeoutEmail()"
+			            <p><input id="email" placeholder="Input e-mail" name="email" type="text" oninput="removeErrorEmail()"
 			            <c:if test="${condition['success'] eq false}"> value="${field['mail']}" </c:if> class="text" autocomplete="off"/>
 
                         <span class="incorrect-input" id="emailFail">
@@ -137,7 +128,7 @@
 
                     <div class="form-action-1">
                         <div>
-                            <input id="photo" type="radio" name="rad" value="photo" class="radio"
+                            <input id="photo" type="radio" name="rad" value="photo" class="radio" onchange="removeErrorService()"
                                 <c:if test="${field['radio'] eq 'photo'}">
                                     <c:if test="${condition['success'] eq false}">
                                         checked="checked"
@@ -150,7 +141,7 @@
                             <span class="incorrect-radio"><c:if test="${field['radio'] eq 'fail'}">Выберите услугу!</c:if></span>
 
                             <p class="first_check">
-                            <input id="video" type="radio" name="rad"
+                            <input id="video" type="radio" name="rad" onchange="removeErrorService()"
                                 <c:if test="${field['radio'] eq 'video'}">
                                     <c:if test="${condition['success'] eq false}">
                                         checked="checked"
