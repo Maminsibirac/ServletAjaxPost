@@ -2,8 +2,18 @@
         "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-<web-app>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
     <display-name>Archetype Created Web Application</display-name>
+
+    <context-param>
+        <param-name>Log4j</param-name>
+        <param-value>/WEB-INF/log4j.properties</param-value>
+    </context-param>
 
     <servlet>
         <servlet-name>sap</servlet-name>
@@ -13,6 +23,7 @@
     <servlet>
         <servlet-name>servletSniffer</servlet-name>
         <servlet-class>com.sevenbits.servlets.sniffer.ServletSniffer</servlet-class>
+
     </servlet>
 
     <servlet-mapping>
@@ -24,6 +35,7 @@
         <servlet-name>servletSniffer</servlet-name>
         <url-pattern>/sniffer</url-pattern>
     </servlet-mapping>
+
 
 </web-app>
 

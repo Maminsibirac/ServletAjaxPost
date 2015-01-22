@@ -12,7 +12,7 @@
 }
 
 INPUT.text:focus {
-	border: 2px solid #fda815;	
+	border: 2px solid #fda815;
 }
 
 TEXTAREA:focus {
@@ -24,7 +24,7 @@ TEXTAREA:focus {
 html {
     background:	grey;
     background-repeat:no-repeat;
-    background-attachment:fixed;	
+    background-attachment:fixed;
 }
 
 
@@ -32,29 +32,29 @@ html {
 .header {
 	width: 1152px;
 	height: 180px;
-	background-image: linear-gradient(to top, #7499b4 ,#a1dae7 60%);	
-	margin: auto;	
+	background-image: linear-gradient(to top, #7499b4 ,#a1dae7 60%);
+	margin: auto;
 }
 
 .header .snow-logo {
 	float: left;
 	width: 105px;
 	height: 158px;
-	margin: 5px 0 0 233px; 
+	margin: 5px 0 0 233px;
 }
 
 .header .social-logo {
 	width: 130px;
 	height: 7px;
 	float: right;
-	margin: -150px 225px 0 0;	
+	margin: -150px 225px 0 0;
 }
 
 .header .text {
 	height: 70px;
 	width: 350px;
-	padding: 5px 447px 90px 365px; 
-	color: white;	
+	padding: 5px 447px 90px 365px;
+	color: white;
 	font-family: PT-Sans;
 	font-style: Italic;
 	font-size: 20px;
@@ -81,20 +81,20 @@ html {
 	font-family: PT-Sans, sans-serif;
 	font-style: Italic;
 	font-size: 18px;
-	color: #94c4d2;	
+	color: #94c4d2;
 }
 
 .header .toolbar .tool-first {
-	padding: 14px 0 0 38px;	
+	padding: 14px 0 0 38px;
 }
 
 .header .toolbar .tool-second {
-	margin: -39px 0 0 172px;	
+	margin: -39px 0 0 172px;
 }
 
 .header .toolbar .tool-third {
 	margin: -21px 0 0 380px;
-	color: #dca92c;	
+	color: #dca92c;
 }
 
 
@@ -103,11 +103,11 @@ main {
 	width: 1152px;
 	height: 1092px;
 	margin: auto;
-	background-color: #7499b4;						  
+	background-color: #7499b4;
 }
 
 main .background {
-	background-image: url(images/background/mount.png);
+	background-image: url(../images/background/mount.png);
 	background-repeat: no-repeat;
 	height: 546px;
 	background-position: 14px 140px
@@ -118,20 +118,20 @@ main .content-first {
 	height: 252px;
 	margin: 0px 0 0 220px;
 	float:left;
-	position: relative;	
+	position: relative;
 }
 
 main .content-first .arrow-left {
 	position: absolute;
 	top: 112px;
 	left: 12px;
-	opacity: 0.6;	
+	opacity: 0.6;
 }
 
 main .content-first .arrow-right {
 	position: absolute;
 	top:112px;
-	right: 20px;	
+	right: 20px;
 }
 
 main .content-first .radio-button-first {
@@ -158,8 +158,8 @@ main .content-second {
 
 main .content-second .arena {
 	position: absolute;
-	width: 73px; 
-	height: 70px;	
+	width: 73px;
+	height: 70px;
 	right: 223px;
 	opacity: 0.8;
 }
@@ -169,33 +169,33 @@ main .content-second .play {
 	width: 32px;
 	top: 18px;
 	right: 322px;
-	opacity: 0.5;	
+	opacity: 0.5;
 }
 
 main .content-second .photo {
-	position: absolute;	
-	width: 73px; 
+	position: absolute;
+	width: 73px;
 	height: 70px;
 	opacity: 0.8;
-	top: 89px;
+	top: 91px;
 	right: 223px;
-	
+
 }
 
 main .content-second .snow {
 	position: absolute;
-	width: 73px; 
+	width: 73px;
 	height: 69px;
 	opacity: 0.8;
 	right: 223px;
-}	
+}
 
 main .content-second .text-video {
 	position: absolute;
 	right: 215px;
 	top: 15px;
 	font: normal 18px arial, sans-serif;
-	width: 70px;	
+	width: 70px;
 }
 
 main .content-second .text-photo {
@@ -215,121 +215,134 @@ main .content-second .text-press {
 }
 
 main .content-second .press {
-	padding-left:7px;	
+	padding-left:7px;
 }
 
 main .article-content {
 	width: 452px;
-	heigth: 80px;
 	background-color: #b1cecf;
 	opacity: 0.6;
-	margin: 4px 0 0 220px;
+	margin: 3px 0 0 220px;
 	padding: 10px 15px;
 	font-family: PT-Sans, Regular, sens-serif;
-	font-size: 16px;
+	font-size: 15px;
 }
 
 main .title {
 	margin: 155px 0 0 220px;
 	font: italic bold 24px arial, sans-serif;
-	color: #fda815; 
+	color: #fda815;
 }
 
 
 /*Main Article*/
-article {	
+article {
 	width: 1152px;
-	height: 80px;
-	background-image: url(images/background/background_dark.png);	
+	height: 120px;
+	background-image: url(../images/background/background_dark.png);
 }
 
 article .text {
 	width: 685px;
-	height: 485px;
 	margin-left: 220px;
-	margin-top: 6px;
+	margin-top: 7px;
 	padding-top: 18px;
 	font-family: PT-Sans, Regular, sans-serif;
 	font-size: 14px;
 	color: #f6f9fb;
-	line-height: 25px;	
+	line-height: 25px;
 }
 
+article .send-successful {
+	width: 		 	290px;
+	color: 		 	#fda815;
+	font-size: 	 	20px;
+	margin-top: 	15px;
+	min-height:  	20px;
+    margin-left:	490px;
+}
 
 /*Main Action*/
 .edit-form {
-	padding-top: 36px;
 	margin-left: 325px;
 	height: 465px;
  	width: 1152px;
-	color: #f6f9fb; 
-	font-size: 18px;	
+	color: #f6f9fb;
+	font-size: 18px;
 }
 
 
-span {
+.edit-form .form-text span {
 	margin-left: 4px;
 	font-size: 12px;
-	color: #94c4d2;	
+	color: #94c4d2;
 }
 
 .ground {
-	background-color: #1b252e; 	
+	background-color: #1b252e;
+}
+
+.incorrect-input {
+	color: 		 	#fda815;
+	margin-left:	5px;
 }
 
 .edit-form .text {
 	width: 350px;
 	border: 2px solid #7499b4;
 	background-color: black;
-	color: #7499b4; 
+	color: #7499b4;
 	height: 25px;
-	margin-left: 15px;	
+	margin-left: 15px;
 }
 
 .form-text {
 	font-size: 16px;
-	margin-right: 10px;
+	margin-right: 14px;
 	float: left;
-	height: 400px;	
+	height: 400px;
 }
 
 .comments {
-	padding-top: 150px;
-	margin-left: 2px;
+	padding-top: 145px;
 }
 
 
-.indent {	 
-	margin-top: 25px;
+.indent {
+	margin-top: 26px;
 	margin-left: 21px;
 }
 
 .form-text .name {
-	padding-left: 54px;
+	padding-left: 55px;
 	padding-top: 2px;
 }
 
 
 .form-text .email {
-	padding-left: 25px;
-	margin-left: 15px;
+	padding-left: 40px;
 }
 
 .box {
 	width: 350px;
 	border: 2px solid #7499b4;
 	background-color: black;
-	color: #7499b4;	
+	color: #7499b4;
 }
 
 .form-action-1 {
 	font-size: 15px;
 	margin-top: 32px;
-	padding-left: 120px;	
+	padding-left: 120px;
 }
 
+.form-action-1 .incorrect-radio {
+	margin: 0 0 0 256px;
+    font-size: 18;
+    color: #fda815;
+}
 
-.first_check {	
+.first_check {
 	margin-top: 12px;
 }
 
@@ -338,22 +351,22 @@ span {
 }
 
 .textarea {
-	margin-top: 15px;	
+	margin-top: 15px;
 }
 
 .send {
-	margin-top: 15px;	
-	margin-left: 270px;
+	margin-top: 15px;
+	margin-left: 275px;
 }
 
 .submit {
 	width: 200px;
-	height: 50px;	
+	height: 50px;
 	background: #62b7d6;
 	border: 0px solid;
 	font-family: PT-Sans. sans-serif;
 	font-size: 19px;
-	color: black;  
+	color: black;
 }
 
 #messenger {
@@ -363,7 +376,7 @@ span {
 	font-size: 17px;
 	width: 350px;
 	background: #62b7d6;
-	display:none;	
+	display:none;
 }
 
 
@@ -373,16 +386,16 @@ footer {
 	height: 320px;
 	margin: auto;
 	background-color: #1b252e;
-	background-image: url(images/background/mount_footer.png);
+	background-image: url(../images/background/mount_footer.png);
 	background-repeat: no-repeat;
-	background-position: bottom left;	
+	background-position: bottom left;
 }
 
 footer .snowboard-footer {
 	width: 335px;
 	height: 296px;
 	margin: -55px 0 280px 790px;
-	background-image: url(images/pictures/snowboard_footer.png);
+	background-image: url(../images/pictures/snowboard_footer.png);
 }
 
 footer .text-contact {
@@ -405,6 +418,7 @@ footer .text-company {
 	font-size: 13px;
 	width: 190px;
 	height:20px;
-	color: #f6f9fb; 
+	color: #f6f9fb;
 	margin: 30px 0 0 770px;
 }
+
