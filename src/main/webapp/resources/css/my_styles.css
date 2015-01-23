@@ -122,7 +122,7 @@ main {
 .background {
 	background-image:  	 url(../images/background/mount.png);
     background-repeat:	 no-repeat;
-    background-position: 14px 140px
+	background-position: 14px 140px;
 	height: 			 546px;
 }
 
@@ -200,7 +200,7 @@ main {
 	opacity:  0.8;
 	position: absolute;
 	right:    223px;
-	top:      91px;
+	top:      90px;
 	width:    73px;
 }
 
@@ -250,7 +250,7 @@ main {
 	background-color: #b1cecf;
 	font-family: 	  PT-Sans, Regular, sens-serif;
 	font-size: 		  15px;
-	margin: 		  3px 0 0 220px;
+	margin: 		  4px 0 0 220px;
 	opacity: 		  0.6;
 	padding: 		  10px 15px;
 	width: 			  452px;
@@ -284,12 +284,12 @@ article
 }
 
 article .send-successful {
-	width: 		 	290px;
+	width: 		 	400px;
 	color: 		 	#fda815;
 	font-size: 	 	20px;
 	margin-top: 	15px;
 	min-height:  	20px;
-    margin-left:	490px;
+    margin-left:	450px;
 }
 
 /*Main Action*/
@@ -301,7 +301,6 @@ article .send-successful {
  	width: 		 1152px;
 
 }
-
 
 .edit-form
 .form-text span {
@@ -391,7 +390,7 @@ article .send-successful {
 }
 
 .send {
-	margin-left: 275px;
+	margin-left: 270px;
 	margin-top:  15px;
 }
 

@@ -16,7 +16,6 @@ public class Validator {
     private static final Logger logger = Logger.getLogger(Validator.class);
 
     public Validator(String first, String last, String email) {
-        logger.info(getClass().getName());
         pattern = Pattern.compile(EMAIL_PATTERN);
         this.first = first;
         this.last = last;

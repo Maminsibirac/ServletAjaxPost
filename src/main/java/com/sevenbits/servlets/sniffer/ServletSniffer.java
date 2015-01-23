@@ -1,40 +1,100 @@
 package com.sevenbits.servlets.sniffer;
 
+import com.sevenbits.servlets.jdbc_test.JdbcTest;
 import com.sevenbits.servlets.validator.Validator;
 import org.apache.log4j.Logger;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class ServletSniffer extends HttpServlet {
     private static final Logger logger = Logger.getLogger(ServletSniffer.class);
 
+    private boolean isName;
+    private boolean isSurname;
+    private boolean isMail;
+    private boolean isSuccess;
+
+    private Map<String, Boolean> conditions;
+    private Map<String, String> field;
+
+    private JdbcTest jdbcTest;
+
+    @Override
+    public void init() {
+        isName = false;
+        isSurname = false;
+        isMail = false;
+        isSuccess = false;
+
+        conditions = new HashMap<String, Boolean>();
+        field = new HashMap<String, String>();
+
+        jdbcTest = new JdbcTest();
+
+        try {
+            jdbcTest.createDBUserTable();
+        }
+        catch(SQLException e) {
+            logger.error(e.getMessage());
+        }
+
+        try {
+            super.init();
+        }
+        catch(ServletException e) {
+            logger.error(e.getMessage());
+        }
+    }
+
+    private boolean repeatRegistration(JdbcTest jdbcTest, String email) {
+        if(jdbcTest.selectFromDB("EMAIL='" + email + "'").get("name") != null) {
+            return true;
+        }
+
+        return false;
+    }
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, java.io.IOException {
-        logger.info(getClass().getName());
         Map<String, String[]> parameters = request.getParameterMap();
-        Validator validator = new Validator(parameters.get("first")[0],
-                parameters.get("last")[0], parameters.get("email")[0]);
-        Map<String, Boolean> conditions = new HashMap<String, Boolean>();
-        Map<String, String> field = new HashMap<String, String>();
-
-        boolean isName = validator.isNameValid();
-        boolean isSurname = validator.isSurnameValid();
-        boolean isMail = validator.isEmailValid();
-
-        conditions.put("success", (isName && isSurname && isMail));
-        conditions.put("first", isName);
-        conditions.put("last", isSurname);
-        conditions.put("email", isMail);
 
         field.put("name", parameters.get("first")[0]);
         field.put("surname", parameters.get("last")[0]);
         field.put("mail", parameters.get("email")[0]);
+
+        Validator validator = new Validator(field.get("name"),
+                field.get("surname"), field.get("mail"));
+
+        isName = validator.isNameValid();
+        isSurname = validator.isSurnameValid();
+        isMail = validator.isEmailValid();
+        isSuccess = (isName && isSurname && isMail &&
+                request.getParameter("rad") != null);
+
+        if(isSuccess) {
+            if(!repeatRegistration(jdbcTest, field.get("mail"))) {
+                jdbcTest.insertIntoDB(field);
+                conditions.put("repeatRegistered", false);
+            }
+            else {
+                conditions.put("repeatRegistered", true);
+            }
+        }
+        else  {
+            conditions.put("repeatRegistered", false);
+        }
+
+        conditions.put("success", isSuccess);
+        conditions.put("first", isName);
+        conditions.put("last", isSurname);
+        conditions.put("email", isMail);
+
         field.put("comments", parameters.get("comments")[0]);
 
         if(request.getParameter("rad") != null &&
@@ -55,6 +115,13 @@ public class ServletSniffer extends HttpServlet {
         }
         else {
             field.put("check", "off");
+        }
+
+        if(isSuccess && !conditions.get("repeatRegistered")) {
+            field.put("name", "");
+            field.put("surname", "");
+            field.put("mail", "");
+            field.put("comments", "");
         }
 
         request.getSession().setAttribute("field", field);

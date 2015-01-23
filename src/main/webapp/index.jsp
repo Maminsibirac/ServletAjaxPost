@@ -80,8 +80,14 @@
             	Чтобы записать незабываемое видео или снять чумовую фотосессию в снежных горах на сноуборде, заполните форму и мы свяжемся с вами в ближайшее время.
             </div>
             <div class="send-successful">
-                <c:if test="${condition['success']}">
-                    Ваша заявка успешно принята.
+                <c:if test="${condition['repeatRegistered'] eq false}">
+                    <c:if test="${condition['success']}">
+                        Ваша заявка успешно принята.
+                    </c:if>
+                </c:if>
+
+                <c:if test="${condition['repeatRegistered']}">
+                    Такой пользователь уже зарегистрирован!
                 </c:if>
             </div>
         </article>
@@ -99,7 +105,7 @@
 
 			        <div form-action>
 			            <input id="first" name="first" placeholder="Input name" type="text" oninput="removeErrorName()"
-			            <c:if test="${condition['success'] eq false}"> value="${field['name']}" </c:if> class="text" autocomplete="off"/>
+			             value="${field['name']}"  class="text" autocomplete="off"/>
 
                         <span class="incorrect-input" id="nameFail">
                                 <c:if test="${condition['first'] eq false}">
@@ -108,7 +114,7 @@
                         </span>
 
 			            <p><input id="last" name="last" placeholder="Input surname" type="text" oninput="removeErrorSurname()"
-			            <c:if test="${condition['success'] eq false}"> value="${field['surname']}" </c:if> class="text" autocomplete="off"/>
+			             value="${field['surname']}"  class="text" autocomplete="off"/>
 
 			            <span class="incorrect-input" id="surnameFail">
 			                    <c:if test="${condition['last'] eq false}">
@@ -117,7 +123,7 @@
 			            </span></p>
 
 			            <p><input id="email" placeholder="Input e-mail" name="email" type="text" oninput="removeErrorEmail()"
-			            <c:if test="${condition['success'] eq false}"> value="${field['mail']}" </c:if> class="text" autocomplete="off"/>
+			             value="${field['mail']}"  class="text" autocomplete="off"/>
 
                         <span class="incorrect-input" id="emailFail">
                                 <c:if test="${condition['email'] eq false}">
@@ -162,7 +168,7 @@
 			  			</div>
 
 			  			<div class="textarea"><textarea rows="5" id="comments" name="comments"
-			  			    placeholder="Your comments" class="box" autocomplete="off" ><c:if test="${condition['success'] eq false}"><c:out value="${field['comments']}" /></c:if></textarea>
+			  			    placeholder="Your comments" class="box" autocomplete="off" ><c:out value="${field['comments']}" /></textarea>
 			  			</div>
 
 					</div>
