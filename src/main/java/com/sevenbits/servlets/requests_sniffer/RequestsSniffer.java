@@ -42,9 +42,7 @@ public class RequestsSniffer extends HttpServlet {
         fields = validator.validValueField(parameters, request.getParameter("rad"),
                 request.getParameter("our"));
         conditions = validator.getConditions();
-        logger.info("Radio: " + fields.get("radio"));
-        logger.info("Checkbox: " + fields.get("check"));
-        logger.info("Repeat: " + conditions.get("repeatRegistered"));
+
 
         request.getSession().setAttribute("field", fields);
         request.getSession().setAttribute("condition", conditions);
