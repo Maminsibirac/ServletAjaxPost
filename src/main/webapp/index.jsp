@@ -136,9 +136,7 @@
                         <div>
                             <input id="photo" type="radio" name="rad" value="photo" class="radio" onchange="removeErrorService()"
                                 <c:if test="${field['radio'] eq 'photo'}">
-                                    <c:if test="${condition['repeatRegistered']}">
-                                        checked="checked"
-                                    </c:if>
+                                    checked="checked"
                                 </c:if>
 
                                 <c:if test="${condition['repeatRegistered'] eq false}">
@@ -154,22 +152,16 @@
                             <p class="first_check">
                             <input id="video" type="radio" name="rad" onchange="removeErrorService()"
                                 <c:if test="${field['radio'] eq 'video'}">
-                                    <c:if test="${condition['repeatRegistered']}">
-                                        checked="checked"
-                                    </c:if>
+                                    checked="checked"
                                 </c:if>
                             value="video" class="radio"
                             /> Видеосъемка</p>
                         </div>
 
-
-
 			  			<div class="second_check">
 			  			    <input id="our" type="checkbox" value="on" name="our" class="radio"
-			  			        <c:if test="${condition['repeatRegistered']}">
-			  			            <c:if test="${field['check'] eq 'on'}">
-			  			                checked="checked"
-			  			            </c:if>
+			  			        <c:if test="${field['check'] eq 'on'}">
+			  			            checked="checked"
 			  			        </c:if>
 
 			  			        <c:if test="${condition['repeatRegistered'] eq false}">

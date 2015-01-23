@@ -171,7 +171,7 @@ public class DBConnector {
 
         if(user.get("name") != null) {
             logger.info("User: " + user.get("name") + " " + user.get("surname")
-                    + " " + user.get("email") + "is already registered!");
+                    + " " + user.get("email") + " is already registered!");
         }
 
         return user;
