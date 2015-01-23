@@ -22,7 +22,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
     </servlet>
     <servlet>
         <servlet-name>servletSniffer</servlet-name>
-        <servlet-class>com.sevenbits.servlets.sniffer.ServletSniffer</servlet-class>
+        <servlet-class>com.sevenbits.servlets.requests_sniffer.RequestsSniffer</servlet-class>
 
     </servlet>
 
