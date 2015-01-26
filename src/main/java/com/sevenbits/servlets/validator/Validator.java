@@ -36,7 +36,9 @@ public class Validator {
         isSurname = false;
         isMail = false;
 
+        //Validator shouldn't collaborate with DB! Use service.
         DBConnector = new DBConnector();
+        //It's not a responsibility of validator. Ever.
         DBConnector.createDBUserTable();
     }
 

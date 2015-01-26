@@ -16,6 +16,7 @@ public class DBConnector {
     }
 
     private void initConnectionPool() {
+        //Hardcode!! Should be properties.
         String url = "jdbc:mysql://localhost:3306/user";
         String user = "root";
         String password = "abrakadabra";
@@ -39,6 +40,7 @@ public class DBConnector {
         }
     }
 
+    //Where is JavaDoc?
     public final Connection getDBConnection() {
         try {
             if(connectionPool.getMaxActive() <= connectionPool.getNumActive()) {
@@ -55,6 +57,7 @@ public class DBConnector {
         }
     }
 
+    //Bad name
     public final void returnDBConnection(Connection connection) {
         if(connection == null) {
             logger.error("Returning NULL to pool");
@@ -145,6 +148,7 @@ public class DBConnector {
 
         try {
             connection = getDBConnection();
+            //Potential NULL Pointer!
             statement = connection.prepareStatement("SELECT NAME, SURNAME, EMAIL FROM User WHERE EMAIL=?");
             statement.setString(1, condition);
             ResultSet rs = statement.executeQuery();
@@ -156,6 +160,7 @@ public class DBConnector {
             }
         } catch (SQLException e) {
             logger.error(e.getMessage());
+            //Need exception!
         }
         finally {
             returnDBConnection(connection);
